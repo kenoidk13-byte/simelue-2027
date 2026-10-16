@@ -1,514 +1,331 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Симелуэ / 2027 — Новый год на другом берегу</title>
-<meta name="description" content="12 дней серф-приключений на острове Симелуэ. 29.12.2026 — 09.01.2027. Индонезия, Индийский океан.">
+<title>СИМЕЛУЭ / 2027 — Новый год. Другой берег.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&subset=cyrillic&display=swap" rel="stylesheet">
+<style>
+:root{--sand:#f2f0e7;--sand2:#e5e2d6;--deep:#103b43;--ink:#102f35;--mute:#586965;--mist:#abc0bd;--line:#c8cec2;--line-d:#3d5a5d;--coral:#f45b36}
+*{box-sizing:border-box;margin:0;padding:0}
+html{font-size:calc(100vw/120);scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--sand);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+section{padding:7rem 6rem;position:relative}
+.dark{background:var(--deep);color:var(--sand)}
+.alt{background:var(--sand2)}
+.rub{display:flex;gap:1.5rem;align-items:center;font-size:1rem;margin-bottom:2.2rem}
+.rub b{font-weight:400;color:var(--coral)}
+.rub span{font-weight:600;text-transform:uppercase;color:var(--mute)}
+.dark .rub span{color:var(--mist)}
+h2{font-weight:600;line-height:1.02;font-size:6.25rem;letter-spacing:-.01em}
+.p{font-size:1.5rem;line-height:1.5;color:var(--mute)}
+.dark .p{color:var(--mist)}
+.row{display:flex;gap:7.5rem}
+.row.end{align-items:flex-end}
+.ph{position:relative;overflow:hidden}
+.cap{font-size:.95rem;color:var(--mute);margin-top:1rem}
+.dark .cap{color:var(--mist)}
+hr{border:0;height:1px;background:var(--line);width:100%}
+.dark hr{background:var(--line-d)}
+.btn{display:inline-flex;align-items:center;gap:2.5rem;height:4.75rem;padding:0 2rem;border-radius:100px;background:var(--coral);color:#fff;font-weight:600;font-size:1.375rem;transition:transform .3s,box-shadow .3s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px -10px rgba(244,91,54,.6)}
+.btn svg{width:1.6rem;height:1.6rem;transition:transform .3s}.btn:hover svg{transform:translate(4px,-4px)}
+svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+/* hero */
+.hero{height:67.5rem;min-height:640px;padding:0 6rem;color:var(--sand);background:var(--deep);overflow:hidden;display:flex;flex-direction:column}
+.hero>.bg,.hero>.shade{position:absolute;inset:0}
+.hero>.bg img{transform:scale(1.06);transition:transform 2.4s cubic-bezier(.2,.7,.2,1)}
+.hero.on>.bg img{transform:scale(1)}
+.shade{background:linear-gradient(180deg,rgba(8,46,54,.72) 0%,rgba(8,46,54,.16) 44%,rgba(8,46,54,.4) 80%)}
+.hero>*{position:relative}.hero>.bg,.hero>.shade{position:absolute}
+nav{height:7.5rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.33);flex:none}
+.logo{display:flex;gap:1rem;align-items:center;font-weight:600;font-size:1.3rem}.logo svg{width:2.4rem;height:2.4rem}
+nav .links{display:flex;gap:2.75rem;font-size:1.125rem}
+nav .links a,.mail{opacity:.9;transition:opacity .2s}nav .links a:hover,.mail:hover{opacity:1}
+.mail{display:flex;gap:1.1rem;align-items:center;font-size:1.125rem}.mail svg{width:1.4rem;height:1.4rem}
+.geo{display:flex;justify-content:space-between;padding-top:2.75rem;font-size:1rem;font-weight:500}.geo span+span{font-weight:400;font-size:1.2rem}
+.promise{padding-top:5.9rem;width:68rem}
+.promise h1{font-weight:500;font-size:5.25rem;line-height:1.04;letter-spacing:-.015em}
+.promise p{margin-top:1.5rem;width:41rem;font-size:1.56rem;line-height:1.45}
+.act{display:flex;justify-content:space-between;align-items:center;padding-top:2.5rem}
+.act div p{font-size:1.06rem;line-height:1.5;width:22rem}
+.mega{position:absolute!important;left:5rem;right:5rem;top:46.75rem;font-weight:700;font-size:16.6rem;line-height:1;letter-spacing:-.02em;white-space:nowrap;text-align:center;pointer-events:none}
+.foot{position:absolute!important;left:6rem;right:6rem;top:63.4rem;display:flex;justify-content:space-between;font-size:.94rem}
+/* sections */
+.s1 .row>:first-child{width:59rem;flex:none}.s1 .p{width:45rem;margin-top:2.25rem}
+.s1 h2{font-size:5.9rem}
+.tag{display:flex;gap:1.25rem;align-items:center;font-weight:600;font-size:1.06rem;margin-bottom:2rem}.tag svg{width:1rem;height:1rem}
+.s1 .big{font-size:1.62rem;line-height:1.5;color:var(--mute);margin-bottom:2rem}
+.adv{display:flex;justify-content:space-between;margin-top:2rem;font-size:1.125rem}.adv b{display:block;color:var(--coral);font-weight:400;font-size:2.25rem;margin-bottom:.9rem}
+.s2{padding-top:6.25rem}.s2 h2{font-size:6.25rem}
+.s2 .row>:first-child{width:65.6rem;flex:none}
+.lv{font-size:1.125rem;margin-bottom:1.5rem;color:var(--sand)}
+.s2 .ph{height:33rem;margin:3.25rem 0}
+.s2 .two{display:flex;gap:5.5rem}.s2 .two>:first-child{width:50rem;flex:none}
+.s2 h3{font-weight:500;font-size:2.6rem;color:var(--sand);margin-bottom:1rem}
+.small{font-size:.94rem;line-height:1.4;margin-top:1rem}
+.s3{padding-top:7.2rem;padding-bottom:4.5rem}.s3 h2{font-size:6.25rem}
+.s3 .row>:first-child{width:66rem;flex:none}.s3 .row>:last-child{padding-top:3.75rem}.s3 .row .p+.p{color:var(--ink);margin-top:1.5rem}
+.s3 .ph{height:33.75rem;margin-top:3.75rem}
+.cp{display:flex;justify-content:space-between;font-size:1.06rem;margin-top:1rem}.cp span+span{font-size:.88rem;color:var(--mute)}
+.s4{display:flex;gap:7rem;padding-top:3.5rem;padding-bottom:7.5rem}
+.s4>:first-child{width:52rem;flex:none}.s4 .ph{height:38rem}
+.s4>:last-child{flex:1;padding-top:1.5rem}.s4 h2{font-size:5rem;margin-bottom:2.25rem}
+.am{display:flex;gap:3rem;font-size:1.06rem;margin-top:2rem;flex-wrap:wrap}
+.s5{display:flex;gap:7rem;padding-top:6.5rem;padding-bottom:6.5rem}
+.s5>:first-child{width:58.75rem;flex:none}.s5 h2{font-size:5.5rem;margin-bottom:2rem}
+.s5 .name{font-size:2.6rem;margin-bottom:2rem}
+.tr{display:flex;gap:2rem;padding:1.25rem 0 .75rem;border-top:1px solid var(--line-d)}
+.tr:last-child{border-bottom:0}.tr em{font-style:normal;font-size:2.5rem;line-height:1.1;color:var(--coral);width:4.4rem;flex:none}
+.tr h4{font-weight:500;font-size:1.62rem;color:var(--sand);margin-bottom:.5rem}.tr p{font-size:1.25rem;line-height:1.4;color:var(--mist)}
+.s5>:last-child{flex:1}.s5 .ph{height:43rem}
+.s6 .row.end{margin-bottom:3.75rem}.s6 .row>:first-child{width:66rem;flex:none}.s6 h2{font-size:6.25rem}.s6 .row>:last-child{padding-bottom:.4rem}
+.s6 .row.m{gap:4.5rem;align-items:flex-start}.s6 .row.m>:first-child{width:61.25rem;flex:none}.s6 .ph{height:43.75rem}
+.rt{padding-bottom:1.6rem}.rt .h{display:flex;gap:1.5rem;align-items:baseline;margin:1.4rem 0}.rt .h b{font-weight:400;color:var(--coral);font-size:1rem;width:2.5rem;flex:none}
+.rt .h h4{font-weight:500;font-size:2.1rem;color:var(--ink)}.rt p{padding-left:4rem;font-size:1.3rem;line-height:1.5;color:var(--mute)}
+.s7 .row>:first-child{width:43.75rem;flex:none}.s7 h2{font-size:5.1rem}.s7 .p{margin-top:2.25rem}
+.s7 .row>:last-child{flex:1}
+.ac{display:flex;gap:1.75rem;padding:1.4rem 0 .6rem;border-top:1px solid var(--line)}.ac svg{width:2rem;height:2rem;flex:none;color:var(--ink)}
+.ac h4{font-weight:500;font-size:1.94rem;margin-bottom:.5rem}.ac p{font-size:1.25rem;line-height:1.4;color:var(--mute)}
+.ny{height:65rem;padding:5.9rem 6rem;color:var(--sand);overflow:hidden}
+.ny>.bg,.ny>.sh{position:absolute;inset:0}.ny>.sh{background:linear-gradient(90deg,rgba(8,42,52,.91),rgba(8,42,52,.25) 65%,rgba(8,42,52,.06))}
+.ny>*{position:relative}.ny>.bg,.ny>.sh{position:absolute}
+.ny .rub span{color:var(--mist)}.ny .in{padding-top:5.1rem;width:62.5rem}
+.ny h2{font-size:7rem}.ny .in p{margin-top:2.6rem;width:45.6rem;font-size:1.7rem;line-height:1.45}.ny .in p+p{font-size:1.4rem;width:auto;margin-top:2.6rem}
+.yr{position:absolute!important;left:6rem;right:6rem;top:54.1rem;display:flex;justify-content:space-between;align-items:flex-end;font-size:1.06rem}
+.yr b{font-weight:500;color:var(--coral);font-size:9.5rem;line-height:1}
+.s8{padding-top:7rem;padding-bottom:6rem}.s8 .row{align-items:flex-end;margin-bottom:3rem}.s8 .row>:first-child{width:68.75rem;flex:none}.s8 h2{font-size:5.5rem}
+.s8 .row p.p{font-size:1.56rem;line-height:1.45;flex:1}
+.s8 .ph{height:35.4rem}.s8 .cp span{color:var(--mute);font-size:1rem}
+.s9{padding-top:6.25rem;padding-bottom:2.5rem}.s9 .row{align-items:center;gap:6.9rem;margin-bottom:4rem}
+.n12{width:39.4rem;flex:none}.n12 b{display:block;font-weight:500;font-size:21.9rem;line-height:.9;letter-spacing:-.03em}.n12 span{color:var(--coral);font-size:1.25rem}
+.s9 h2{font-size:4.9rem}.s9 .row p{margin-top:2rem}.s9 .d{color:var(--sand);font-size:1.56rem;margin-top:2rem}
+.fin{padding:4rem 0}.fin .row>:first-child{width:62.5rem;flex:none}.fin h2{font-size:4.75rem}.fin p.sub{font-size:1.44rem;color:var(--mist);margin-top:1.75rem}
+.fin .row>:last-child{display:flex;flex-direction:column;gap:1.6rem;align-items:flex-start}.fin .row>:last-child p{color:var(--sand);font-size:1.375rem;line-height:1.5}
+.bot{border-top:1px solid var(--line-d);padding-top:1.75rem;display:flex;justify-content:space-between;align-items:flex-end}
+.bot b{font-weight:600;font-size:1.25rem}.bot p{font-size:.88rem;line-height:1.5;color:var(--mist);text-align:right;width:55rem}
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.rv.on{opacity:1;transform:none}
+.ph img{transform:scale(1.08);transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}.ph.on img{transform:scale(1)}
+@media(prefers-reduced-motion:reduce){.rv,.ph img,.hero>.bg img{transition:none;transform:none;opacity:1}}
+/* mobile */
+@media(max-width:900px){
+html{font-size:calc(100vw/50)}
+section{padding:4rem 1.6rem}
+.row,.row.m,.s2 .two,.s4,.s5{flex-direction:column;gap:2.4rem}
+.row>*,.s2 .two>*,.s4>*,.s5>*{width:100%!important;padding-top:0!important}
+nav .links{display:none}.hero{padding:0 1.6rem;height:auto;min-height:100svh}
+.geo{flex-direction:column;gap:.5rem;font-size:.9rem}.geo span+span{font-size:.9rem}
+.promise{width:100%;padding-top:3rem}.promise h1{font-size:4.2rem}.promise p{width:100%;font-size:1.9rem}
+.act{flex-direction:column;align-items:flex-start;gap:2rem;padding-bottom:2rem}.act div p{width:100%;font-size:1.8rem}
+.mega,.foot{position:static!important;margin-top:2rem}.mega{font-size:15.5vw;text-align:left;margin-left:-.5vw}.foot{flex-direction:column;gap:.5rem;padding-bottom:2rem;font-size:1.6rem}
+h2,.s1 h2,.s2 h2,.s3 h2,.s4 h2,.s5 h2,.s6 h2,.s7 h2,.s8 h2,.s9 h2,.fin h2{font-size:5.2rem}
+.ny h2{font-size:5.6rem}.p,.s1 .big,.s1 .p{font-size:1.9rem!important;width:100%!important}
+.rub{font-size:1.5rem}.btn{height:7rem;font-size:2rem;gap:2rem;padding:0 2.6rem}.btn svg{width:2.4rem;height:2.4rem}
+.s2 .ph,.s3 .ph,.s4 .ph,.s5 .ph,.s6 .ph,.s8 .ph{height:48vw;min-height:220px}.s4 .ph,.s5 .ph,.s6 .ph{height:70vw}
+.s2 h3,.s5 .name{font-size:3rem}.adv{font-size:1.7rem}.adv b{font-size:3rem}
+.tr h4{font-size:2.2rem}.tr p,.ac p,.rt p{font-size:1.8rem}.rt h4,.ac h4{font-size:2.6rem!important}
+.cap,.cp,.small,.cp span+span{font-size:1.5rem!important}.cp{flex-direction:column;gap:.4rem}
+.am{font-size:1.8rem;gap:1rem 2.4rem}.lv,.tag{font-size:1.7rem}.rt p{padding-left:0}
+.ny{height:auto;min-height:100svh;padding:4rem 1.6rem}.ny .in{width:100%;padding-top:2.4rem}.ny .in p{width:100%!important;font-size:2rem}
+.yr{position:static!important;margin-top:4rem;font-size:1.6rem}.yr b{font-size:11rem}
+.n12 b{font-size:21rem}.n12{width:auto}.bot{flex-direction:column;align-items:flex-start;gap:1.6rem}.bot p{text-align:left;width:100%;font-size:1.4rem}.bot b{font-size:2rem}
+.fin p.sub,.fin .row>:last-child p,.s9 .d{font-size:1.9rem}.s8 .row p.p{font-size:1.9rem}
+}
+</style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="arr" viewBox="0 0 24 24"><path d="M7 7h10v10M7 17 17 7"/></symbol>
+</defs></svg>
 
-<div class="progress" aria-hidden="true"><span class="progress__bar" data-progress></span></div>
-
-<header class="nav" data-nav>
-  <div class="nav__inner">
-    <a class="brand" href="#top" data-magnetic>
-      <span class="brand__mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-          <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 1.3 0 1.9-.5 2.5-1"/>
-          <path d="M2 12c.6.5 1.2 1 2.5 1C7 13 7 11 9.5 11c2.6 0 2.4 2 5 2 1.3 0 1.9-.5 2.5-1"/>
-          <path d="M2 18c.6.5 1.2 1 2.5 1C7 19 7 17 9.5 17c2.6 0 2.4 2 5 2 1.3 0 1.9-.5 2.5-1"/>
-        </svg>
-      </span>
-      <span class="brand__text">СИМЕЛУЭ / 2027</span>
-    </a>
-
-    <nav class="nav__links" aria-label="Разделы">
-      <a href="#ostrov" data-magnetic>Остров</a>
-      <a href="#serfing" data-magnetic>Серфинг</a>
-      <a href="#prozhivanie" data-magnetic>Проживание</a>
-      <a href="#programma" data-magnetic>Программа</a>
-    </nav>
-
-    <a class="nav__cta" href="#kontakt" data-magnetic>
-      <span>Написать нам</span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M7 17 17 7"/><path d="M7 7h10v10"/>
-      </svg>
-    </a>
+<header class="hero" id="top">
+  <div class="bg"><img data-a="fae10.png" alt=""></div><div class="shade"></div>
+  <nav>
+    <a class="logo" href="#top">
+      <svg class="i" viewBox="0 0 24 24"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg>
+      СИМЕЛУЭ / 2027</a>
+    <div class="links"><a href="#island">Остров</a><a href="#surf">Серфинг</a><a href="#stay">Проживание</a><a href="#program">Программа</a></div>
+    <a class="mail" href="#join">Написать нам <svg class="i"><use href="#arr"/></svg></a>
+  </nav>
+  <div class="geo rv"><span>ИНДОНЕЗИЯ · ИНДИЙСКИЙ ОКЕАН</span><span>29.12.2026 — 09.01.2027</span></div>
+  <div class="promise">
+    <h1 class="rv" style="--d:.1s">Новый год.<br>Другой берег.</h1>
+    <p class="rv" style="--d:.25s">12 дней серф-приключений на острове, о котором знают единицы.</p>
   </div>
+  <div class="act rv" style="--d:.4s">
+    <a class="btn" href="#join">Хочу на Симелуэ <svg class="i"><use href="#arr"/></svg></a>
+    <div><p>Для продолжающих и продвинутых</p><p style="margin-top:.6rem">Меньше людей. Больше океана.</p></div>
+  </div>
+  <div class="mega rv" style="--d:.5s">СИМЕЛУЭ</div>
+  <div class="foot"><span>СЕРФИНГ / ИССЛЕДОВАНИЯ / СВОИ ЛЮДИ</span><span>Листай навстречу океану ↓</span></div>
 </header>
 
-<main id="top">
-
-  <!-- 00 · ПЕРВЫЙ ЭКРАН -->
-  <section class="hero" id="hero">
-    <div class="hero__bg" data-hero-bg>
-      <img src="assets/hero.jpg" alt="Остров Симелуэ и океан на рассвете" data-hero-img>
+<section class="s1" id="island">
+  <div class="rub rv"><b>01</b><span>Подальше от привычного</span></div>
+  <div class="row">
+    <div>
+      <h2 class="rv">Хорошие волны.<br>Без лишних людей.</h2>
+      <p class="p rv" style="--d:.15s">Чтобы классно покататься — и желательно без толпы — сейчас нужно забираться подальше. Симелуэ как раз из таких мест.</p>
     </div>
-    <div class="hero__shade" aria-hidden="true"></div>
-
-    <div class="hero__inner">
-      <div class="hero__top">
-        <div class="hero__geo" data-reveal>
-          <span class="micro micro--wide">ИНДОНЕЗИЯ · ИНДИЙСКИЙ ОКЕАН</span>
-          <span class="micro">29.12.2026 — 09.01.2027</span>
-        </div>
-
-        <div class="hero__promise">
-          <h1 class="hero__title">
-            <span class="line"><span class="line-i">Новый год.</span></span>
-            <span class="line"><span class="line-i">Другой берег.</span></span>
-          </h1>
-          <p class="hero__lead" data-reveal>12 дней серф-приключений на острове, о котором знают&nbsp;единицы.</p>
-        </div>
-
-        <div class="hero__action" data-reveal>
-          <a class="btn btn--orange" href="#kontakt" data-magnetic>
-            <span>Хочу на Симелуэ</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M7 17 17 7"/><path d="M7 7h10v10"/>
-            </svg>
-          </a>
-          <div class="hero__meta">
-            <span>Для продолжающих и продвинутых</span>
-            <span>Меньше людей. Больше океана.</span>
-          </div>
-        </div>
-
-        <div class="hero__island" aria-hidden="true">
-          <span class="hero__island-text" data-hero-word>СИМЕЛУЭ</span>
-        </div>
-
-        <div class="hero__bottom" data-reveal>
-          <span class="micro micro--wide">СЕРФИНГ / ИССЛЕДОВАНИЯ / СВОИ ЛЮДИ</span>
-          <span class="micro">Листай навстречу океану ↓</span>
-        </div>
-      </div>
+    <div class="rv" style="--d:.2s">
+      <div class="tag"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="#f45b36"/><circle cx="8" cy="8" r="7" fill="none" stroke="#f45b36" opacity=".4"/></svg>СИМЕЛУЭ, ИНДОНЕЗИЯ</div>
+      <p class="big">На Новый год погода здесь гораздо лучше, чем на Бали: больше солнца, меньше ветра и хорошие волны.</p>
+      <hr>
+      <div class="adv"><div><b>↗</b>Больше солнца</div><div><b>↗</b>Меньше ветра</div><div><b>↗</b>Свободнее споты</div></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- 01 · ПОЧЕМУ СИМЕЛУЭ -->
-  <section class="sec sec--cream" id="ostrov">
-    <div class="wrap">
-      <p class="label" data-reveal>
-        <span class="label__num">01</span>
-        <span class="label__text">Подальше от привычного</span>
-      </p>
-
-      <div class="split split--wide">
-        <div class="split__main">
-          <h2 class="d1" data-lines>
-            <span class="line"><span class="line-i">Хорошие волны.</span></span>
-            <span class="line"><span class="line-i">Без лишних людей.</span></span>
-          </h2>
-          <p class="lead measure" data-reveal>Чтобы классно покататься — и желательно без толпы — сейчас нужно забираться подальше. Симелуэ как раз из таких мест.</p>
-        </div>
-
-        <aside class="split__aside">
-          <p class="marker" data-reveal><span class="marker__dot"></span>СИМЕЛУЭ, ИНДОНЕЗИЯ</p>
-          <p class="body-xl" data-reveal>На Новый год погода здесь гораздо лучше, чем на Бали: больше солнца, меньше ветра и хорошие волны.</p>
-          <hr class="rule" data-rule>
-          <ul class="facts" data-stagger>
-            <li class="fact"><span class="fact__icon">↗</span><span class="fact__label">Больше солнца</span></li>
-            <li class="fact"><span class="fact__icon">↗</span><span class="fact__label">Меньше ветра</span></li>
-            <li class="fact"><span class="fact__icon">↗</span><span class="fact__label">Свободнее споты</span></li>
-          </ul>
-        </aside>
-      </div>
+<section class="s2 dark" id="surf">
+  <div class="row end">
+    <div>
+      <div class="rub rv"><b>02</b><span>Твоя следующая волна</span></div>
+      <h2 class="rv">Те самые волны.<br>Из серф-фильмов.</h2>
     </div>
-  </section>
-
-  <!-- 02 · ВОЛНЫ И СЕРФИНГ -->
-  <section class="sec sec--teal" id="serfing">
-    <div class="wrap">
-      <div class="split split--wide split--bottom">
-        <div class="split__main">
-          <p class="label label--dark" data-reveal>
-            <span class="label__num">02</span>
-            <span class="label__text">Твоя следующая волна</span>
-          </p>
-          <h2 class="d1" data-lines>
-            <span class="line"><span class="line-i">Те самые волны.</span></span>
-            <span class="line"><span class="line-i">Из серф-фильмов.</span></span>
-          </h2>
-        </div>
-        <aside class="split__aside">
-          <p class="note note--light" data-reveal>ПРОДОЛЖАЮЩИМ И ПРОДВИНУТЫМ</p>
-          <p class="body-xl body-xl--dark" data-reveal>Зимой волны мягче. Это твой шанс покататься без конкуренции и попробовать поймать первую трубу.</p>
-        </aside>
-      </div>
-
-      <figure class="media media--wide" data-parallax>
-        <img src="assets/waves.jpg" alt="Волны у берегов Симелуэ" loading="lazy">
-      </figure>
-
-      <div class="split split--wide split--top">
-        <div class="split__main">
-          <h3 class="d4" data-reveal>Левые. Правые. Твои.</h3>
-          <p class="body-xl body-xl--dark" data-reveal>Резкие и полайтовее, споты мирового уровня и трубы — здесь есть из чего выбрать.</p>
-        </div>
-        <aside class="split__aside">
-          <p class="body-xl body-xl--dark" data-reveal>Практически все профики уже были здесь. Теперь — наша очередь увидеть эти волны не на экране.</p>
-          <p class="caption caption--dark" data-reveal>Океан задаёт ритм. Мы оставляем достаточно времени, чтобы его почувствовать.</p>
-        </aside>
-      </div>
+    <div class="rv" style="--d:.15s">
+      <p class="lv">ПРОДОЛЖАЮЩИМ И ПРОДВИНУТЫМ</p>
+      <p class="p">Зимой волны мягче. Это твой шанс покататься без конкуренции и попробовать поймать первую трубу.</p>
     </div>
-  </section>
+  </div>
+  <div class="ph rv"><img data-a="277df.png" alt="Волна в Индийском океане"></div>
+  <div class="two">
+    <div class="rv"><h3>Левые. Правые. Твои.</h3><p class="p">Резкие и полайтовее, споты мирового уровня и трубы — здесь есть из чего выбрать.</p></div>
+    <div class="rv" style="--d:.15s"><p class="p">Практически все профики уже были здесь. Теперь — наша очередь увидеть эти волны не на экране.</p><p class="p small">Океан задаёт ритм. Мы оставляем достаточно времени, чтобы его почувствовать.</p></div>
+  </div>
+</section>
 
-  <!-- 03 · ЖИЗНЬ НА СПОТЕ -->
-  <section class="sec sec--cream">
-    <div class="wrap">
-      <div class="split split--wide">
-        <div class="split__main">
-          <p class="label" data-reveal>
-            <span class="label__num">03</span>
-            <span class="label__text">Проживание в топовой локации</span>
-          </p>
-          <h2 class="d1" data-lines>
-            <span class="line"><span class="line-i">Океан —</span></span>
-            <span class="line"><span class="line-i">круглосуточно.</span></span>
-          </h2>
-        </div>
-        <aside class="split__aside split__aside--push">
-          <p class="body-xl" data-reveal>Живём в очень комфортном отеле прямо на споте. Волны перед глазами с утра до вечера.</p>
-          <p class="body-xl body-xl--ink" data-reveal>Захотел — зашёл в воду до тренировки. Захотел — остался после. Или просто покатался сам. Никакой гонки.</p>
-        </aside>
-      </div>
-
-      <figure class="media media--wide media--tall" data-parallax>
-        <img src="assets/life.jpg" alt="Вид с берега на океан" loading="lazy">
-      </figure>
-
-      <div class="row-between">
-        <p class="note" data-reveal>Первая линия. Свой ритм. Океан рядом.</p>
-        <p class="caption" data-reveal>Атмосферная иллюстрация · не фото конкретного отеля</p>
-      </div>
+<section class="s3" id="stay">
+  <div class="row">
+    <div>
+      <div class="rub rv"><b>03</b><span>Проживание в топовой локации</span></div>
+      <h2 class="rv">Океан —<br>круглосуточно.</h2>
     </div>
-  </section>
+    <div>
+      <p class="p rv">Живём в очень комфортном отеле прямо на споте. Волны перед глазами с утра до вечера.</p>
+      <p class="p rv" style="--d:.1s">Захотел — зашёл в воду до тренировки. Захотел — остался после. Или просто покатался сам. Никакой гонки.</p>
+    </div>
+  </div>
+  <div class="ph rv"><img data-a="aa240.png" alt="Вид с берега"></div>
+  <div class="cp"><span>Первая линия. Свой ритм. Океан рядом.</span><span>Атмосферная иллюстрация · не фото конкретного отеля</span></div>
+</section>
 
-  <!-- 04 · НОМЕРА -->
-  <section class="sec sec--cream sec--tight" id="prozhivanie">
-    <div class="wrap">
-      <div class="split split--rooms">
-        <figure class="media media--bungalow" data-parallax>
-          <img src="assets/bungalow.jpg" alt="Бунгало у океана" loading="lazy">
-          <figcaption class="caption">Иллюстрация атмосферы проживания, не фотография конкретного номера.</figcaption>
-        </figure>
+<section class="s4">
+  <div class="rv"><div class="ph"><img data-a="94ac2.png" alt="Бунгало"></div><p class="cap">Иллюстрация атмосферы проживания, не фотография конкретного номера.</p></div>
+  <div>
+    <div class="rub rv"><b>04</b><span>Комфортные синглы</span></div>
+    <h2 class="rv">Свой номер.<br>Свой вид<br>на океан.</h2>
+    <p class="p rv" style="margin-bottom:2rem">Стильные, комфортные бунгало в индонезийском стиле на первой линии. Все живут в синглах — своё пространство после насыщенного дня.</p>
+    <hr>
+    <div class="am rv"><span>Одноместное проживание</span><span>Кондиционер</span><span>Вид на океан</span></div>
+  </div>
+</section>
 
-        <div class="split__main split__main--rooms">
-          <p class="label" data-reveal>
-            <span class="label__num">04</span>
-            <span class="label__text">Комфортные синглы</span>
-          </p>
-          <h2 class="d2" data-lines>
-            <span class="line"><span class="line-i">Свой номер.</span></span>
-            <span class="line"><span class="line-i">Свой вид</span></span>
-            <span class="line"><span class="line-i">на океан.</span></span>
-          </h2>
-          <p class="body-xl" data-reveal>Стильные, комфортные бунгало в индонезийском стиле на первой линии. Все живут в синглах — своё пространство после насыщенного дня.</p>
-          <hr class="rule" data-rule>
-          <ul class="amenities" data-stagger>
-            <li>Одноместное проживание</li>
-            <li>Кондиционер</li>
-            <li>Вид на океан</li>
-          </ul>
-        </div>
+<section class="s5 dark">
+  <div>
+    <div class="rub rv"><b>05</b><span>Профессиональный серф-тренер</span></div>
+    <h2 class="rv">В новый год —<br>на новом уровне.</h2>
+    <p class="name rv">С Педро Барбудо</p>
+    <p class="p rv" style="margin-bottom:2rem">Встречаем 2027 вместе с тренером, который улучшит вашу технику, а если вам важен соревновательный серфинг — научит набирать больше очков.</p>
+    <div class="tr rv"><em>02</em><div><h4>Серф-сессии каждый день</h4><p>Две сессии в день и персональные задачи для вашего уровня.</p></div></div>
+    <div class="tr rv"><em>↗</em><div><h4>Ежедневный видеоразбор</h4><p>Смотрим, разбираем, пробуем снова. Прогресс гарантируем!</p></div></div>
+  </div>
+  <div class="rv"><div class="ph"><img data-a="d8a18.png" alt="Серфинг"></div><p class="cap">Больше осознанности в каждой следующей сессии.</p></div>
+</section>
+
+<section class="s6" id="program">
+  <div class="row end">
+    <div>
+      <div class="rub rv"><b>06</b><span>За пределами лайнапа</span></div>
+      <h2 class="rv">Остров, который<br>хочется исследовать.</h2>
+    </div>
+    <p class="p rv">Между серф-сессиями — не просто отдых. Мы приготовили программу, чтобы познакомиться с островом по-настоящему.</p>
+  </div>
+  <div class="row m">
+    <div class="rv"><div class="ph"><img data-a="7fa5a.png" alt="Лагуна"></div><p class="cap">Бирюзовая вода, зелёные тропы и время никуда не спешить.</p></div>
+    <div>
+      <div class="rt rv"><hr><div class="h"><b>01</b><h4>На соседний остров</h4></div><p>Увидим очень красивый остров — ещё один повод выбраться за пределы спота.</p></div>
+      <div class="rt rv"><hr><div class="h"><b>02</b><h4>К водопаду</h4></div><p>Сменим солёные брызги на прохладу тропического водопада.</p></div>
+      <div class="rt rv"><hr><div class="h"><b>03</b><h4>Хайкинг до лагуны</h4></div><p>Пройдём маршрут к лагуне с бирюзовой водой.</p></div>
+      <div class="rt rv"><hr><div class="h"><b>04</b><h4>На холм за панорамой</h4></div><p>Поднимемся ради того самого атмосферного вида на остров.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="s7 alt">
+  <div class="row">
+    <div>
+      <div class="rub rv"><b>07</b><span>Если хочется ещё</span></div>
+      <h2 class="rv">Не только<br>серф.<br>Но и не скука.</h2>
+      <p class="p rv">Для тех, кому мало волн и прогулок, найдётся свой способ переключиться.</p>
+    </div>
+    <div>
+      <div class="ac rv"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><div><h4>Ежедневная йога</h4><p>Мягко включаем тело и возвращаем баланс.</p></div></div>
+      <div class="ac rv"><svg class="i" viewBox="0 0 24 24"><path d="M2 12h20M12 2v20M20 16l-4-4 4-4M4 8l4 4-4 4M16 4l-4 4-4-4M8 20l4-4 4 4"/></svg><div><h4>Ледяные ванны</h4><p>Релакс и перезагрузка после океана.</p></div></div>
+      <div class="ac rv"><svg class="i" viewBox="0 0 24 24"><path d="M4 22V4M4 4h13l-2 4 2 4H4"/></svg><div><h4>Гольф и пляжный волейбол</h4><p>Меняем доску на игру — и снова в движение.</p></div></div>
+      <div class="ac rv"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg><div><h4>Бильярд и настольный теннис</h4><p>Ещё один хороший повод собраться вместе.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="ny" style="padding:5.9rem 6rem">
+  <div class="bg"><img data-a="b691d.png" alt="Костёр у океана"></div><div class="sh"></div>
+  <div class="rub rv"><b>08</b><span>31 декабря · Новогодняя ночь</span></div>
+  <div class="in">
+    <h2 class="rv">Вместо снега —<br>песок. Вместо<br>суеты — свои.</h2>
+    <p class="rv">Лобстеры, морепродукты и огромный костёр на берегу Индийского океана. В Индонезии, в компании друзей-серферов.</p>
+    <p class="rv">Такой Новый год вы точно запомните.</p>
+  </div>
+  <div class="yr"><span>ВСТРЕЧАЕМ НОВУЮ ГЛАВУ</span><b>2027</b></div>
+</section>
+
+<section class="s8">
+  <div class="row">
+    <div>
+      <div class="rub rv"><b>09</b><span>И ещё кое-что важное</span></div>
+      <h2 class="rv">Лучшие закаты,<br>которые мы видели.</h2>
+    </div>
+    <p class="p rv">Иногда лучший план на вечер — просто остаться на берегу.</p>
+  </div>
+  <div class="ph rv"><img data-a="2bce3.png" alt="Закат"></div>
+  <div class="cp"><span style="color:var(--mute);font-size:1rem">СИМЕЛУЭ / ПОСЛЕДНИЙ СВЕТ ДНЯ</span><span>Без фильтров в памяти.</span></div>
+</section>
+
+<section class="s9 dark" id="join">
+  <div class="rub rv"><b>10</b><span>Пора за своей историей</span></div>
+  <div class="row">
+    <div class="n12 rv"><b>12</b><span>ДНЕЙ СЕРФ-ПРИКЛЮЧЕНИЙ</span></div>
+    <div class="rv" style="--d:.15s">
+      <h2>Не 8, не 10.<br>И даже не 11.</h2>
+      <p class="p">Целых 12 дней, чтобы вдоволь посерфить, отдохнуть, исследовать остров и встретить Новый год 2027 в особенной атмосфере.</p>
+      <p class="d">29 декабря 2026 — 9 января 2027</p>
+    </div>
+  </div>
+  <hr>
+  <div class="fin">
+    <div class="row" style="align-items:center;gap:6.9rem">
+      <div class="rv"><h2>GO — встречать<br>2027 вместе!</h2><p class="sub">Эксклюзивная поездка. Мест немного.</p></div>
+      <div class="rv" style="--d:.15s">
+        <a class="btn" href="#join">Хочу на Симелуэ <svg class="i"><use href="#arr"/></svg></a>
+        <p>Напишите нам в директ — расскажем подробности и ответим на вопросы о поездке.</p>
       </div>
     </div>
-  </section>
+  </div>
+  <div class="bot"><b>СИМЕЛУЭ / 2027</b><p>Изображения сгенерированы для передачи атмосферы путешествия и не являются фотографиями конкретного отеля, его номеров или тренера.</p></div>
+</section>
 
-  <!-- 05 · ТРЕНЕР И ПРОГРЕСС -->
-  <section class="sec sec--teal">
-    <div class="wrap">
-      <div class="split split--coach">
-        <div class="split__main split__main--coach">
-          <p class="label label--dark" data-reveal>
-            <span class="label__num">05</span>
-            <span class="label__text">Профессиональный серф-тренер</span>
-          </p>
-          <h2 class="d2" data-lines>
-            <span class="line"><span class="line-i">В новый год —</span></span>
-            <span class="line"><span class="line-i">на новом уровне.</span></span>
-          </h2>
-          <p class="d5" data-reveal>С Педро Барбудо</p>
-          <p class="body-xl body-xl--dark" data-reveal>Встречаем 2027 вместе с тренером, который улучшит вашу технику, а если вам важен соревновательный серфинг — научит набирать больше очков.</p>
-
-          <ol class="program" data-stagger>
-            <li class="program__item">
-              <span class="program__mark">02</span>
-              <div class="program__body">
-                <h3 class="program__title">Серф-сессии каждый день</h3>
-                <p class="program__desc">Две сессии в день и персональные задачи для вашего уровня.</p>
-              </div>
-            </li>
-            <li class="program__item">
-              <span class="program__mark">↗</span>
-              <div class="program__body">
-                <h3 class="program__title">Ежедневный видеоразбор</h3>
-                <p class="program__desc">Смотрим, разбираем, пробуем снова. Прогресс гарантируем!</p>
-              </div>
-            </li>
-          </ol>
-        </div>
-
-        <figure class="media media--coach" data-parallax>
-          <img src="assets/coach.jpg" alt="Серф-тренировка в океане" loading="lazy">
-          <figcaption class="caption caption--dark">Больше осознанности в каждой следующей сессии.</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- 06 · ИССЛЕДОВАНИЕ ОСТРОВА -->
-  <section class="sec sec--cream" id="programma">
-    <div class="wrap">
-      <div class="split split--wide split--bottom">
-        <div class="split__main">
-          <p class="label" data-reveal>
-            <span class="label__num">06</span>
-            <span class="label__text">За пределами лайнапа</span>
-          </p>
-          <h2 class="d1" data-lines>
-            <span class="line"><span class="line-i">Остров, который</span></span>
-            <span class="line"><span class="line-i">хочется исследовать.</span></span>
-          </h2>
-        </div>
-        <aside class="split__aside split__aside--end">
-          <p class="body-xl" data-reveal>Между серф-сессиями — не просто отдых. Мы приготовили программу, чтобы познакомиться с островом по-настоящему.</p>
-        </aside>
-      </div>
-
-      <div class="split split--routes">
-        <figure class="media media--lagoon" data-parallax>
-          <img src="assets/lagoon.jpg" alt="Бирюзовая лагуна острова" loading="lazy">
-          <figcaption class="caption">Бирюзовая вода, зелёные тропы и время никуда не спешить.</figcaption>
-        </figure>
-
-        <ol class="routes" data-stagger>
-          <li class="route">
-            <span class="route__num">01</span>
-            <div class="route__body">
-              <h3 class="route__title">На соседний остров</h3>
-              <p class="route__desc">Увидим очень красивый остров — ещё один повод выбраться за пределы спота.</p>
-            </div>
-          </li>
-          <li class="route">
-            <span class="route__num">02</span>
-            <div class="route__body">
-              <h3 class="route__title">К водопаду</h3>
-              <p class="route__desc">Сменим солёные брызги на прохладу тропического водопада.</p>
-            </div>
-          </li>
-          <li class="route">
-            <span class="route__num">03</span>
-            <div class="route__body">
-              <h3 class="route__title">Хайкинг до лагуны</h3>
-              <p class="route__desc">Пройдём маршрут к лагуне с бирюзовой водой.</p>
-            </div>
-          </li>
-          <li class="route">
-            <span class="route__num">04</span>
-            <div class="route__body">
-              <h3 class="route__title">На холм за панорамой</h3>
-              <p class="route__desc">Поднимемся ради того самого атмосферного вида на остров.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <!-- 07 · АКТИВНОСТИ -->
-  <section class="sec sec--sand">
-    <div class="wrap">
-      <div class="split split--activities">
-        <div class="split__main split__main--activities">
-          <p class="label" data-reveal>
-            <span class="label__num">07</span>
-            <span class="label__text">Если хочется ещё</span>
-          </p>
-          <h2 class="d2" data-lines>
-            <span class="line"><span class="line-i">Не только</span></span>
-            <span class="line"><span class="line-i">серф.</span></span>
-            <span class="line"><span class="line-i">Но и не скука.</span></span>
-          </h2>
-          <p class="body-xl" data-reveal>Для тех, кому мало волн и прогулок, найдётся свой способ переключиться.</p>
-        </div>
-
-        <ul class="acts" data-stagger>
-          <li class="act">
-            <span class="act__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/>
-              </svg>
-            </span>
-            <div class="act__body">
-              <h3 class="act__title">Ежедневная йога</h3>
-              <p class="act__desc">Мягко включаем тело и возвращаем баланс.</p>
-            </div>
-          </li>
-          <li class="act">
-            <span class="act__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M2 12h20M12 2v20M4.9 4.9l14.2 14.2M19.1 4.9 4.9 19.1M8 4l4 3 4-3M8 20l4-3 4 3M4 8l3 4-3 4M20 8l-3 4 3 4"/>
-              </svg>
-            </span>
-            <div class="act__body">
-              <h3 class="act__title">Ледяные ванны</h3>
-              <p class="act__desc">Релакс и перезагрузка после океана.</p>
-            </div>
-          </li>
-          <li class="act">
-            <span class="act__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/>
-              </svg>
-            </span>
-            <div class="act__body">
-              <h3 class="act__title">Гольф и пляжный волейбол</h3>
-              <p class="act__desc">Меняем доску на игру — и снова в движение.</p>
-            </div>
-          </li>
-          <li class="act">
-            <span class="act__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="1.5"/>
-              </svg>
-            </span>
-            <div class="act__body">
-              <h3 class="act__title">Бильярд и настольный теннис</h3>
-              <p class="act__desc">Ещё один хороший повод собраться вместе.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- 08 · НОВОГОДНЯЯ НОЧЬ -->
-  <section class="sec sec--nye">
-    <div class="nye__bg" data-parallax-bg>
-      <img src="assets/nye.jpg" alt="Костёр на берегу океана" loading="lazy" data-nye-img>
-    </div>
-    <div class="nye__shade" aria-hidden="true"></div>
-
-    <div class="wrap nye__wrap">
-      <p class="label label--dark" data-reveal>
-        <span class="label__num">08</span>
-        <span class="label__text">31 декабря · Новогодняя ночь</span>
-      </p>
-
-      <div class="nye__content">
-        <h2 class="d0" data-lines>
-          <span class="line"><span class="line-i">Вместо снега —</span></span>
-          <span class="line"><span class="line-i">песок. Вместо</span></span>
-          <span class="line"><span class="line-i">суеты — свои.</span></span>
-        </h2>
-        <p class="lead lead--light measure" data-reveal>Лобстеры, морепродукты и огромный костёр на берегу Индийского океана. В Индонезии, в компании друзей-серферов.</p>
-        <p class="d6" data-reveal>Такой Новый год вы точно запомните.</p>
-      </div>
-
-      <div class="nye__foot">
-        <p class="note note--light micro--wide" data-reveal>ВСТРЕЧАЕМ НОВУЮ ГЛАВУ</p>
-        <p class="d7" data-year>2027</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 09 · ЗАКАТЫ -->
-  <section class="sec sec--cream">
-    <div class="wrap">
-      <div class="split split--wide split--bottom">
-        <div class="split__main">
-          <p class="label" data-reveal>
-            <span class="label__num">09</span>
-            <span class="label__text">И ещё кое-что важное</span>
-          </p>
-          <h2 class="d2" data-lines>
-            <span class="line"><span class="line-i">Лучшие закаты,</span></span>
-            <span class="line"><span class="line-i">которые мы видели.</span></span>
-          </h2>
-        </div>
-        <aside class="split__aside split__aside--end">
-          <p class="lead measure" data-reveal>Иногда лучший план на вечер — просто остаться на берегу.</p>
-        </aside>
-      </div>
-
-      <figure class="media media--wide media--tall" data-parallax>
-        <img src="assets/sunset.jpg" alt="Закат над океаном на Симелуэ" loading="lazy">
-      </figure>
-
-      <div class="row-between">
-        <p class="note note--wide" data-reveal>СИМЕЛУЭ / ПОСЛЕДНИЙ СВЕТ ДНЯ</p>
-        <p class="note" data-reveal>Без фильтров в памяти.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 10 · ПРИГЛАШЕНИЕ -->
-  <section class="sec sec--teal sec--invite" id="kontakt">
-    <div class="wrap">
-      <p class="label label--dark" data-reveal>
-        <span class="label__num">10</span>
-        <span class="label__text">Пора за своей историей</span>
-      </p>
-
-      <div class="invite">
-        <div class="invite__days">
-          <span class="d8" data-count="12">12</span>
-          <span class="invite__unit">ДНЕЙ СЕРФ-ПРИКЛЮЧЕНИЙ</span>
-        </div>
-        <div class="invite__body">
-          <h2 class="d3" data-lines>
-            <span class="line"><span class="line-i">Не 8, не 10.</span></span>
-            <span class="line"><span class="line-i">И даже не 11.</span></span>
-          </h2>
-          <p class="body-xl body-xl--dark" data-reveal>Целых 12 дней, чтобы вдоволь посерфить, отдохнуть, исследовать остров и встретить Новый год 2027 в особенной атмосфере.</p>
-          <p class="note note--light" data-reveal>29 декабря 2026 — 9 января 2027</p>
-        </div>
-      </div>
-
-      <hr class="rule rule--dark" data-rule>
-
-      <div class="split split--final">
-        <div class="split__main">
-          <h2 class="d3" data-lines>
-            <span class="line"><span class="line-i">GO — встречать</span></span>
-            <span class="line"><span class="line-i">2027 вместе!</span></span>
-          </h2>
-          <p class="d6 d6--muted" data-reveal>Эксклюзивная поездка. Мест немного.</p>
-        </div>
-        <aside class="split__aside">
-          <a class="btn btn--orange" href="#kontakt" data-magnetic>
-            <span>Хочу на Симелуэ</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M7 17 17 7"/><path d="M7 7h10v10"/>
-            </svg>
-          </a>
-          <p class="body-lg" data-reveal>Напишите нам в директ — расскажем подробности и ответим на вопросы о поездке.</p>
-        </aside>
-      </div>
-
-      <footer class="footer">
-        <hr class="rule rule--dark" data-rule>
-        <div class="footer__row">
-          <span class="footer__brand">СИМЕЛУЭ / 2027</span>
-          <p class="caption caption--dark">Изображения сгенерированы для передачи атмосферы путешествия и не являются фотографиями конкретного отеля, его номеров или тренера.</p>
-        </div>
-      </footer>
-    </div>
-  </section>
-
-</main>
-
-<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-<script src="main.js" defer></script>
+<script>
+// Временные ссылки Figma живут 7 дней. Скачайте файлы в ./img и поменяйте ASSET на 'img/'.
+const ASSET='https://www.figma.com/api/mcp/asset/3cad5eca-f50a-4f20-804e-3503fe64c96e/';
+document.querySelectorAll('img[data-a]').forEach(i=>i.src=ASSET+i.dataset.a);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.rv,.ph').forEach(el=>io.observe(el));
+requestAnimationFrame(()=>document.getElementById('top').classList.add('on'));
+</script>
 </body>
 </html>
