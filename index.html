@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Симелуэ / 2027 — Новый год на другом берегу</title>
+<meta name="description" content="12 дней серф-приключений на острове Симелуэ. 29.12.2026 — 09.01.2027. Индонезия, Индийский океан.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"><span class="progress__bar" data-progress></span></div>
+
+<header class="nav" data-nav>
+  <div class="nav__inner">
+    <a class="brand" href="#top" data-magnetic>
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 1.3 0 1.9-.5 2.5-1"/>
+          <path d="M2 12c.6.5 1.2 1 2.5 1C7 13 7 11 9.5 11c2.6 0 2.4 2 5 2 1.3 0 1.9-.5 2.5-1"/>
+          <path d="M2 18c.6.5 1.2 1 2.5 1C7 19 7 17 9.5 17c2.6 0 2.4 2 5 2 1.3 0 1.9-.5 2.5-1"/>
+        </svg>
+      </span>
+      <span class="brand__text">СИМЕЛУЭ / 2027</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Разделы">
+      <a href="#ostrov" data-magnetic>Остров</a>
+      <a href="#serfing" data-magnetic>Серфинг</a>
+      <a href="#prozhivanie" data-magnetic>Проживание</a>
+      <a href="#programma" data-magnetic>Программа</a>
+    </nav>
+
+    <a class="nav__cta" href="#kontakt" data-magnetic>
+      <span>Написать нам</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M7 17 17 7"/><path d="M7 7h10v10"/>
+      </svg>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 00 · ПЕРВЫЙ ЭКРАН -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" data-hero-bg>
+      <img src="assets/hero.jpg" alt="Остров Симелуэ и океан на рассвете" data-hero-img>
+    </div>
+    <div class="hero__shade" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <div class="hero__top">
+        <div class="hero__geo" data-reveal>
+          <span class="micro micro--wide">ИНДОНЕЗИЯ · ИНДИЙСКИЙ ОКЕАН</span>
+          <span class="micro">29.12.2026 — 09.01.2027</span>
+        </div>
+
+        <div class="hero__promise">
+          <h1 class="hero__title">
+            <span class="line"><span class="line-i">Новый год.</span></span>
+            <span class="line"><span class="line-i">Другой берег.</span></span>
+          </h1>
+          <p class="hero__lead" data-reveal>12 дней серф-приключений на острове, о котором знают&nbsp;единицы.</p>
+        </div>
+
+        <div class="hero__action" data-reveal>
+          <a class="btn btn--orange" href="#kontakt" data-magnetic>
+            <span>Хочу на Симелуэ</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17 17 7"/><path d="M7 7h10v10"/>
+            </svg>
+          </a>
+          <div class="hero__meta">
+            <span>Для продолжающих и продвинутых</span>
+            <span>Меньше людей. Больше океана.</span>
+          </div>
+        </div>
+
+        <div class="hero__island" aria-hidden="true">
+          <span class="hero__island-text" data-hero-word>СИМЕЛУЭ</span>
+        </div>
+
+        <div class="hero__bottom" data-reveal>
+          <span class="micro micro--wide">СЕРФИНГ / ИССЛЕДОВАНИЯ / СВОИ ЛЮДИ</span>
+          <span class="micro">Листай навстречу океану ↓</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 · ПОЧЕМУ СИМЕЛУЭ -->
+  <section class="sec sec--cream" id="ostrov">
+    <div class="wrap">
+      <p class="label" data-reveal>
+        <span class="label__num">01</span>
+        <span class="label__text">Подальше от привычного</span>
+      </p>
+
+      <div class="split split--wide">
+        <div class="split__main">
+          <h2 class="d1" data-lines>
+            <span class="line"><span class="line-i">Хорошие волны.</span></span>
+            <span class="line"><span class="line-i">Без лишних людей.</span></span>
+          </h2>
+          <p class="lead measure" data-reveal>Чтобы классно покататься — и желательно без толпы — сейчас нужно забираться подальше. Симелуэ как раз из таких мест.</p>
+        </div>
+
+        <aside class="split__aside">
+          <p class="marker" data-reveal><span class="marker__dot"></span>СИМЕЛУЭ, ИНДОНЕЗИЯ</p>
+          <p class="body-xl" data-reveal>На Новый год погода здесь гораздо лучше, чем на Бали: больше солнца, меньше ветра и хорошие волны.</p>
+          <hr class="rule" data-rule>
+          <ul class="facts" data-stagger>
+            <li class="fact"><span class="fact__icon">↗</span><span class="fact__label">Больше солнца</span></li>
+            <li class="fact"><span class="fact__icon">↗</span><span class="fact__label">Меньше ветра</span></li>
+            <li class="fact"><span class="fact__icon">↗</span><span class="fact__label">Свободнее споты</span></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 · ВОЛНЫ И СЕРФИНГ -->
+  <section class="sec sec--teal" id="serfing">
+    <div class="wrap">
+      <div class="split split--wide split--bottom">
+        <div class="split__main">
+          <p class="label label--dark" data-reveal>
+            <span class="label__num">02</span>
+            <span class="label__text">Твоя следующая волна</span>
+          </p>
+          <h2 class="d1" data-lines>
+            <span class="line"><span class="line-i">Те самые волны.</span></span>
+            <span class="line"><span class="line-i">Из серф-фильмов.</span></span>
+          </h2>
+        </div>
+        <aside class="split__aside">
+          <p class="note note--light" data-reveal>ПРОДОЛЖАЮЩИМ И ПРОДВИНУТЫМ</p>
+          <p class="body-xl body-xl--dark" data-reveal>Зимой волны мягче. Это твой шанс покататься без конкуренции и попробовать поймать первую трубу.</p>
+        </aside>
+      </div>
+
+      <figure class="media media--wide" data-parallax>
+        <img src="assets/waves.jpg" alt="Волны у берегов Симелуэ" loading="lazy">
+      </figure>
+
+      <div class="split split--wide split--top">
+        <div class="split__main">
+          <h3 class="d4" data-reveal>Левые. Правые. Твои.</h3>
+          <p class="body-xl body-xl--dark" data-reveal>Резкие и полайтовее, споты мирового уровня и трубы — здесь есть из чего выбрать.</p>
+        </div>
+        <aside class="split__aside">
+          <p class="body-xl body-xl--dark" data-reveal>Практически все профики уже были здесь. Теперь — наша очередь увидеть эти волны не на экране.</p>
+          <p class="caption caption--dark" data-reveal>Океан задаёт ритм. Мы оставляем достаточно времени, чтобы его почувствовать.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 · ЖИЗНЬ НА СПОТЕ -->
+  <section class="sec sec--cream">
+    <div class="wrap">
+      <div class="split split--wide">
+        <div class="split__main">
+          <p class="label" data-reveal>
+            <span class="label__num">03</span>
+            <span class="label__text">Проживание в топовой локации</span>
+          </p>
+          <h2 class="d1" data-lines>
+            <span class="line"><span class="line-i">Океан —</span></span>
+            <span class="line"><span class="line-i">круглосуточно.</span></span>
+          </h2>
+        </div>
+        <aside class="split__aside split__aside--push">
+          <p class="body-xl" data-reveal>Живём в очень комфортном отеле прямо на споте. Волны перед глазами с утра до вечера.</p>
+          <p class="body-xl body-xl--ink" data-reveal>Захотел — зашёл в воду до тренировки. Захотел — остался после. Или просто покатался сам. Никакой гонки.</p>
+        </aside>
+      </div>
+
+      <figure class="media media--wide media--tall" data-parallax>
+        <img src="assets/life.jpg" alt="Вид с берега на океан" loading="lazy">
+      </figure>
+
+      <div class="row-between">
+        <p class="note" data-reveal>Первая линия. Свой ритм. Океан рядом.</p>
+        <p class="caption" data-reveal>Атмосферная иллюстрация · не фото конкретного отеля</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 · НОМЕРА -->
+  <section class="sec sec--cream sec--tight" id="prozhivanie">
+    <div class="wrap">
+      <div class="split split--rooms">
+        <figure class="media media--bungalow" data-parallax>
+          <img src="assets/bungalow.jpg" alt="Бунгало у океана" loading="lazy">
+          <figcaption class="caption">Иллюстрация атмосферы проживания, не фотография конкретного номера.</figcaption>
+        </figure>
+
+        <div class="split__main split__main--rooms">
+          <p class="label" data-reveal>
+            <span class="label__num">04</span>
+            <span class="label__text">Комфортные синглы</span>
+          </p>
+          <h2 class="d2" data-lines>
+            <span class="line"><span class="line-i">Свой номер.</span></span>
+            <span class="line"><span class="line-i">Свой вид</span></span>
+            <span class="line"><span class="line-i">на океан.</span></span>
+          </h2>
+          <p class="body-xl" data-reveal>Стильные, комфортные бунгало в индонезийском стиле на первой линии. Все живут в синглах — своё пространство после насыщенного дня.</p>
+          <hr class="rule" data-rule>
+          <ul class="amenities" data-stagger>
+            <li>Одноместное проживание</li>
+            <li>Кондиционер</li>
+            <li>Вид на океан</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 · ТРЕНЕР И ПРОГРЕСС -->
+  <section class="sec sec--teal">
+    <div class="wrap">
+      <div class="split split--coach">
+        <div class="split__main split__main--coach">
+          <p class="label label--dark" data-reveal>
+            <span class="label__num">05</span>
+            <span class="label__text">Профессиональный серф-тренер</span>
+          </p>
+          <h2 class="d2" data-lines>
+            <span class="line"><span class="line-i">В новый год —</span></span>
+            <span class="line"><span class="line-i">на новом уровне.</span></span>
+          </h2>
+          <p class="d5" data-reveal>С Педро Барбудо</p>
+          <p class="body-xl body-xl--dark" data-reveal>Встречаем 2027 вместе с тренером, который улучшит вашу технику, а если вам важен соревновательный серфинг — научит набирать больше очков.</p>
+
+          <ol class="program" data-stagger>
+            <li class="program__item">
+              <span class="program__mark">02</span>
+              <div class="program__body">
+                <h3 class="program__title">Серф-сессии каждый день</h3>
+                <p class="program__desc">Две сессии в день и персональные задачи для вашего уровня.</p>
+              </div>
+            </li>
+            <li class="program__item">
+              <span class="program__mark">↗</span>
+              <div class="program__body">
+                <h3 class="program__title">Ежедневный видеоразбор</h3>
+                <p class="program__desc">Смотрим, разбираем, пробуем снова. Прогресс гарантируем!</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <figure class="media media--coach" data-parallax>
+          <img src="assets/coach.jpg" alt="Серф-тренировка в океане" loading="lazy">
+          <figcaption class="caption caption--dark">Больше осознанности в каждой следующей сессии.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 · ИССЛЕДОВАНИЕ ОСТРОВА -->
+  <section class="sec sec--cream" id="programma">
+    <div class="wrap">
+      <div class="split split--wide split--bottom">
+        <div class="split__main">
+          <p class="label" data-reveal>
+            <span class="label__num">06</span>
+            <span class="label__text">За пределами лайнапа</span>
+          </p>
+          <h2 class="d1" data-lines>
+            <span class="line"><span class="line-i">Остров, который</span></span>
+            <span class="line"><span class="line-i">хочется исследовать.</span></span>
+          </h2>
+        </div>
+        <aside class="split__aside split__aside--end">
+          <p class="body-xl" data-reveal>Между серф-сессиями — не просто отдых. Мы приготовили программу, чтобы познакомиться с островом по-настоящему.</p>
+        </aside>
+      </div>
+
+      <div class="split split--routes">
+        <figure class="media media--lagoon" data-parallax>
+          <img src="assets/lagoon.jpg" alt="Бирюзовая лагуна острова" loading="lazy">
+          <figcaption class="caption">Бирюзовая вода, зелёные тропы и время никуда не спешить.</figcaption>
+        </figure>
+
+        <ol class="routes" data-stagger>
+          <li class="route">
+            <span class="route__num">01</span>
+            <div class="route__body">
+              <h3 class="route__title">На соседний остров</h3>
+              <p class="route__desc">Увидим очень красивый остров — ещё один повод выбраться за пределы спота.</p>
+            </div>
+          </li>
+          <li class="route">
+            <span class="route__num">02</span>
+            <div class="route__body">
+              <h3 class="route__title">К водопаду</h3>
+              <p class="route__desc">Сменим солёные брызги на прохладу тропического водопада.</p>
+            </div>
+          </li>
+          <li class="route">
+            <span class="route__num">03</span>
+            <div class="route__body">
+              <h3 class="route__title">Хайкинг до лагуны</h3>
+              <p class="route__desc">Пройдём маршрут к лагуне с бирюзовой водой.</p>
+            </div>
+          </li>
+          <li class="route">
+            <span class="route__num">04</span>
+            <div class="route__body">
+              <h3 class="route__title">На холм за панорамой</h3>
+              <p class="route__desc">Поднимемся ради того самого атмосферного вида на остров.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 · АКТИВНОСТИ -->
+  <section class="sec sec--sand">
+    <div class="wrap">
+      <div class="split split--activities">
+        <div class="split__main split__main--activities">
+          <p class="label" data-reveal>
+            <span class="label__num">07</span>
+            <span class="label__text">Если хочется ещё</span>
+          </p>
+          <h2 class="d2" data-lines>
+            <span class="line"><span class="line-i">Не только</span></span>
+            <span class="line"><span class="line-i">серф.</span></span>
+            <span class="line"><span class="line-i">Но и не скука.</span></span>
+          </h2>
+          <p class="body-xl" data-reveal>Для тех, кому мало волн и прогулок, найдётся свой способ переключиться.</p>
+        </div>
+
+        <ul class="acts" data-stagger>
+          <li class="act">
+            <span class="act__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/>
+              </svg>
+            </span>
+            <div class="act__body">
+              <h3 class="act__title">Ежедневная йога</h3>
+              <p class="act__desc">Мягко включаем тело и возвращаем баланс.</p>
+            </div>
+          </li>
+          <li class="act">
+            <span class="act__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 12h20M12 2v20M4.9 4.9l14.2 14.2M19.1 4.9 4.9 19.1M8 4l4 3 4-3M8 20l4-3 4 3M4 8l3 4-3 4M20 8l-3 4 3 4"/>
+              </svg>
+            </span>
+            <div class="act__body">
+              <h3 class="act__title">Ледяные ванны</h3>
+              <p class="act__desc">Релакс и перезагрузка после океана.</p>
+            </div>
+          </li>
+          <li class="act">
+            <span class="act__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/>
+              </svg>
+            </span>
+            <div class="act__body">
+              <h3 class="act__title">Гольф и пляжный волейбол</h3>
+              <p class="act__desc">Меняем доску на игру — и снова в движение.</p>
+            </div>
+          </li>
+          <li class="act">
+            <span class="act__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="1.5"/>
+              </svg>
+            </span>
+            <div class="act__body">
+              <h3 class="act__title">Бильярд и настольный теннис</h3>
+              <p class="act__desc">Ещё один хороший повод собраться вместе.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 · НОВОГОДНЯЯ НОЧЬ -->
+  <section class="sec sec--nye">
+    <div class="nye__bg" data-parallax-bg>
+      <img src="assets/nye.jpg" alt="Костёр на берегу океана" loading="lazy" data-nye-img>
+    </div>
+    <div class="nye__shade" aria-hidden="true"></div>
+
+    <div class="wrap nye__wrap">
+      <p class="label label--dark" data-reveal>
+        <span class="label__num">08</span>
+        <span class="label__text">31 декабря · Новогодняя ночь</span>
+      </p>
+
+      <div class="nye__content">
+        <h2 class="d0" data-lines>
+          <span class="line"><span class="line-i">Вместо снега —</span></span>
+          <span class="line"><span class="line-i">песок. Вместо</span></span>
+          <span class="line"><span class="line-i">суеты — свои.</span></span>
+        </h2>
+        <p class="lead lead--light measure" data-reveal>Лобстеры, морепродукты и огромный костёр на берегу Индийского океана. В Индонезии, в компании друзей-серферов.</p>
+        <p class="d6" data-reveal>Такой Новый год вы точно запомните.</p>
+      </div>
+
+      <div class="nye__foot">
+        <p class="note note--light micro--wide" data-reveal>ВСТРЕЧАЕМ НОВУЮ ГЛАВУ</p>
+        <p class="d7" data-year>2027</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 · ЗАКАТЫ -->
+  <section class="sec sec--cream">
+    <div class="wrap">
+      <div class="split split--wide split--bottom">
+        <div class="split__main">
+          <p class="label" data-reveal>
+            <span class="label__num">09</span>
+            <span class="label__text">И ещё кое-что важное</span>
+          </p>
+          <h2 class="d2" data-lines>
+            <span class="line"><span class="line-i">Лучшие закаты,</span></span>
+            <span class="line"><span class="line-i">которые мы видели.</span></span>
+          </h2>
+        </div>
+        <aside class="split__aside split__aside--end">
+          <p class="lead measure" data-reveal>Иногда лучший план на вечер — просто остаться на берегу.</p>
+        </aside>
+      </div>
+
+      <figure class="media media--wide media--tall" data-parallax>
+        <img src="assets/sunset.jpg" alt="Закат над океаном на Симелуэ" loading="lazy">
+      </figure>
+
+      <div class="row-between">
+        <p class="note note--wide" data-reveal>СИМЕЛУЭ / ПОСЛЕДНИЙ СВЕТ ДНЯ</p>
+        <p class="note" data-reveal>Без фильтров в памяти.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 · ПРИГЛАШЕНИЕ -->
+  <section class="sec sec--teal sec--invite" id="kontakt">
+    <div class="wrap">
+      <p class="label label--dark" data-reveal>
+        <span class="label__num">10</span>
+        <span class="label__text">Пора за своей историей</span>
+      </p>
+
+      <div class="invite">
+        <div class="invite__days">
+          <span class="d8" data-count="12">12</span>
+          <span class="invite__unit">ДНЕЙ СЕРФ-ПРИКЛЮЧЕНИЙ</span>
+        </div>
+        <div class="invite__body">
+          <h2 class="d3" data-lines>
+            <span class="line"><span class="line-i">Не 8, не 10.</span></span>
+            <span class="line"><span class="line-i">И даже не 11.</span></span>
+          </h2>
+          <p class="body-xl body-xl--dark" data-reveal>Целых 12 дней, чтобы вдоволь посерфить, отдохнуть, исследовать остров и встретить Новый год 2027 в особенной атмосфере.</p>
+          <p class="note note--light" data-reveal>29 декабря 2026 — 9 января 2027</p>
+        </div>
+      </div>
+
+      <hr class="rule rule--dark" data-rule>
+
+      <div class="split split--final">
+        <div class="split__main">
+          <h2 class="d3" data-lines>
+            <span class="line"><span class="line-i">GO — встречать</span></span>
+            <span class="line"><span class="line-i">2027 вместе!</span></span>
+          </h2>
+          <p class="d6 d6--muted" data-reveal>Эксклюзивная поездка. Мест немного.</p>
+        </div>
+        <aside class="split__aside">
+          <a class="btn btn--orange" href="#kontakt" data-magnetic>
+            <span>Хочу на Симелуэ</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17 17 7"/><path d="M7 7h10v10"/>
+            </svg>
+          </a>
+          <p class="body-lg" data-reveal>Напишите нам в директ — расскажем подробности и ответим на вопросы о поездке.</p>
+        </aside>
+      </div>
+
+      <footer class="footer">
+        <hr class="rule rule--dark" data-rule>
+        <div class="footer__row">
+          <span class="footer__brand">СИМЕЛУЭ / 2027</span>
+          <p class="caption caption--dark">Изображения сгенерированы для передачи атмосферы путешествия и не являются фотографиями конкретного отеля, его номеров или тренера.</p>
+        </div>
+      </footer>
+    </div>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="main.js" defer></script>
+</body>
+</html>
